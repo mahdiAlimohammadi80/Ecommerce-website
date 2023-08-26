@@ -307,7 +307,7 @@ header .cart:hover .cart-icon {
     text-align: center;
     margin-top: -20px;
     color: #484848;
-    opacity: 1;
+    opacity: 0;
 }
 .hero-section .details p{
     position: relative;
@@ -315,7 +315,7 @@ header .cart:hover .cart-icon {
     font-size: 20px;
     max-width: 650px;
     text-align: center;
-    opacity: 1;
+    opacity: 0;
     color: #333;
     margin-top: 10px;
     line-height: 30px;
@@ -333,7 +333,7 @@ header .cart:hover .cart-icon {
     background-color: rgba(255, 255, 255, .2);
     color: #333;
     cursor: pointer;
-    opacity: 1;
+    opacity: 0;
     transition: .2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 .hero-section .details .shop-btn:hover {
@@ -363,7 +363,7 @@ header .cart:hover .cart-icon {
     position: relative;
     background-color: rgb(213, 232, 247);
    border-radius: 50%;
-   opacity: 1;
+   opacity: 0;
 }
 @keyframes zoomBottom {
     0%{
