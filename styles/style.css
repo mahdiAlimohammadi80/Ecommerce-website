@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'iranSans';
+    src: url(font/IRANSansXFaNum-Regular.woff);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'iranSans';
+}
