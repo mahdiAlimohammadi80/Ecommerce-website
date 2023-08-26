@@ -605,5 +605,89 @@ header .cart:hover .cart-icon {
 .cloth-item .details-btn:hover{
     background-color: rgb(184, 198, 240);
 }
+.banner{
+    padding: 0 120px;
+    margin-top: 50px;
+}
+.banner .row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(200px , 1fr));
+    grid-gap: 20px 30px;
+    margin-top: 20px;
+}
+.banner .banner-card {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #f4f0ff;
+    background-color: rgb(197, 217, 233);
+}
+.banner .banner-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+}
+.banner-card h4{
+    font-size: 32px;
+    background: linear-gradient(to top,rgb(136, 206, 218),rgb(81, 85, 88));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    max-width: 300px;
+}
+.banner-card p{
+    font-size: 18px;
+    opacity: .8;
+    color: #484848;
+    max-width: 300px;
+}
+.banner-card .time-box{
+    margin-top: 20px;
+}
+.banner-card .time-box .main-text{
+    font-size: 16px;
+    opacity: .8;
+    color: #484848;
+}
+.banner-card .time{
+    display: flex;
+    align-items: center;
+}
+.banner-card .time .time-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:10px 16px;
+}
+.banner-card .time .time-text span:nth-child(1){
+    background-color: rgb(147, 191, 227);
+    padding: 8px;
+    border-radius: 6px;
+    color: #fff;
+}
+.banner-card .time .time-text span:nth-child(2){
+    color: #484848;
+    margin-top: 5px;
+}
+.banner-card .banner-btn{
+    width: 120px;
+    height: 40px;
+    border: 1px solid  rgb(147, 191, 227);
+    outline: none;
+    background: none;
+    font-size: 14px;
+    border-radius: 6px;
+    color: #484848;
+    cursor: pointer;
+    transition: .2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.banner-card .banner-btn:hover{
+    background-color: rgb(147, 191, 227);
+    color: #fff;
+}
 
 
