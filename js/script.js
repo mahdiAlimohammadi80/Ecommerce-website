@@ -10,3 +10,17 @@ productMenu.addEventListener('click',(e)=>{
 })
 
 //---------------------------------------------------------------
+
+// fix navbar on top on scroll
+
+const navbar = document.querySelector('.navbar');
+const logoImage = document.querySelector('.logo img');
+
+window.addEventListener('scroll',()=>{
+    if(window.scrollY > 150 && document.body.clientWidth > 1200){
+        logoImage.src = 'image/logo-active.png';
+       return navbar.classList.add('active');
+    }
+    navbar.classList.remove('active');
+    logoImage.src = 'image/1.png';
+})
