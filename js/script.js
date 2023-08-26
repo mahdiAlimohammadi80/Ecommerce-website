@@ -61,3 +61,45 @@ window.addEventListener('load', ()=>{
     })
 
 })
+
+//-----------------------------------------------------------
+
+// draggable lists
+
+const list = document.querySelectorAll('.clothes-list');
+const arrows = document.querySelectorAll('.title-arrow .arrow');
+
+list.forEach((box) => {
+    let isDragging = false;
+
+    box.addEventListener('mousedown', () => {
+        isDragging = true;
+        box.classList.add('active')
+    });
+
+    box.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+            box.scrollLeft -= e.movementX;
+        }
+    });
+
+    box.addEventListener('mouseup', () => {
+        if (isDragging) {
+            isDragging = false;
+            box.classList.remove('active');
+        }
+    });
+
+    arrows.forEach((arrow)=>{
+        arrow.addEventListener('click',()=>{
+            if(arrow.classList.contains('left')){
+                box.scrollLeft -= 300;
+            }else{
+                box.scrollLeft += 300;
+            }
+        })
+    })
+});
+
+
+
