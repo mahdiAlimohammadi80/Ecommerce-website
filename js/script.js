@@ -101,5 +101,48 @@ list.forEach((box) => {
     })
 });
 
+//---------------------------------------------------------------
+
+// banner card time left
+
+const timeBoxes = document.querySelectorAll('.banner-card .time-box');
+
+    let expirationTimes = [
+        new Date('2023-09-20T19:38:20').getTime(),
+        new Date('2023-09-25T17:45:00').getTime(),
+    ];
+    timeBoxes.forEach((box, index) => {
+        let expirationTime = expirationTimes[index];
+        let bannerBtn = document.querySelectorAll('.banner-btn');
+
+        let int = setInterval(() => {
+            let currentTime = new Date().getTime();
+            let timeDifference = expirationTime - currentTime;
+
+            if (timeDifference <= 0) {
+                clearInterval(int);
+                bannerBtn[index].style.display = 'none';
+                box.textContent = "تخفیف منقضی شده است.";
+            }
+
+            let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+            let dayElement = box.querySelector('.day-text');
+            let hourElement = box.querySelector('.hour-text');
+            let minuteElement = box.querySelector('.minute-text');
+            let secondElement = box.querySelector('.second-text');
+
+            dayElement.textContent = days < 10 ? `0${days}` : days;
+            hourElement.textContent = hours < 10 ? `0${hours}` : hours;
+            minuteElement.textContent = minutes < 10 ? `0${minutes}` : minutes;
+            secondElement.textContent = seconds < 10 ? `0${seconds}` : seconds;
+
+        },1000)
+    })
+
+
 
 
