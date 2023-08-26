@@ -426,5 +426,184 @@ header .cart:hover .cart-icon {
     color: #484848;
     font-weight: 500;
 }
+.new-clothes{
+    padding: 0 120px;
+    margin-top: 50px;
+}
+.title-arrow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title-arrow .arrows .arrow{
+    font-size: 30px;
+    color: #484848;
+    background-color: rgb(197, 217, 233);
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin: 5px;
+    user-select: none;
+}
+.clothes-list{
+    list-style: none;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgb(247, 251, 255);
+    scroll-behavior: smooth;
+    position: relative;
+}
+.clothes-list.active{
+    scroll-behavior: auto;
+}
+.cloth-item{
+    position: relative;
+    margin:20px 5px;
+    transition: .2s;
+    border: 1px solid #f4f0ff;
+    user-select: none;
+    width: 200px;
+}
+.clothes-list.active .cloth-item{
+    pointer-events: none;
+}
+.cloth-item .icons{
+    position: absolute;
+    top: 20%;
+    right: 0;
+    opacity: 0;
+    z-index: -1;
+    transition: .2s;
+}
+.cloth-item:hover{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.cloth-item:hover .card-icons{
+    opacity: 1;
+    z-index: 1;
+}
+.cloth-item .favorite ,
+.cloth-item .quick-view{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(184, 198, 240);
+    cursor: pointer;
+}
+.cloth-item .favorite:hover ,
+.cloth-item .quick-view:hover{
+    width: 180px;
+}
+.cloth-item .favorite .icon-text ,
+.cloth-item .quick-view .icon-text {
+    display: none;
+    color: #fff;
+    font-size: 14px;
+    margin-right: 5px;
+}
+.cloth-item .favorite:hover .icon-text,
+.cloth-item .quick-view:hover .icon-text{
+    display: block;
+}
+.cloth-item .favorite i ,
+.cloth-item .quick-view i {
+    color: #fff;
+}
+.cloth-item .quick-view{
+    margin-bottom: 10px;
+}
+.cloth-item .label{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgb(184, 198, 240);
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 0 0 6px 0;
+    color: #484848;
+}
+.cloth-item .image{
+    width: 200px;
+    height: 220px;
+}
+.cloth-item .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cloth-item h4{
+    padding:5px 10px;
+    font-size: 15px;
+    font-size: 500;
+    color: #484848;
+}
+.cloth-item .star{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+}
+.cloth-item .star i{
+    color: rgb(247, 190, 75);
+    margin: 0 5px;
+    font-size: 20px;
+}
+.cloth-item .price-cart .cart{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cloth-item .price-cart .cart i{
+    color: #484848;
+    background-color: rgb(216, 202, 229);
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    pointer-events: auto;
+}
+.cloth-item .price-cart{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.cloth-item .price-cart .price-box{
+    display: flex;
+    flex-direction: column;
+}
+.cloth-item .price-cart .price{
+    font-size: 13px;
+    text-decoration: line-through;
+}
+.cloth-item .price-cart .percent{
+    font-size: 15px;
+}
+.cloth-item .button{
+    width:95% ;
+    margin: 10px auto ;
+    height: 40px;
+}
+.cloth-item .details-btn{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: rgb(141, 173, 198);
+    font-size: 15px;
+    cursor: pointer;
+    transition: .2s;
+}
+.cloth-item .details-btn:hover{
+    background-color: rgb(184, 198, 240);
+}
 
 
