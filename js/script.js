@@ -144,5 +144,30 @@ const timeBoxes = document.querySelectorAll('.banner-card .time-box');
     })
 
 
+//----------------------------------------------------------------
 
+// filterable category 
+
+const filterCards = document.querySelectorAll('.filter-category .card');
+const filterBtn = document.querySelectorAll('.filter-btn');
+
+filterBtn.forEach((btn)=>{
+    btn.addEventListener('click',()=>{
+        document.querySelector('.filter-btn.active').classList.remove('active');
+        btn.classList.add('active');
+        filterCards.forEach((card)=>{
+            card.style.display = 'block'
+            if(btn.dataset.cat == 'no-filter'){
+                return
+            }
+            else{
+                filterCards.forEach((card)=>{
+                    if(card.dataset.cat != btn.dataset.cat){
+                        card.style.display = 'none';
+                    }
+                })
+            } 
+        })
+    })
+})
 
