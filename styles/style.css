@@ -717,5 +717,31 @@ header .cart:hover .cart-icon {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+.filter-category{
+    padding: 0 120px;
+    margin-top: 80px;
+}
+.filter-category .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.filter-category .filter-btn{
+    width: 120px;
+    height: 40px;
+    background: none;
+    outline: none;
+    border: 2px solid rgb(147, 191, 227);
+    margin: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .2s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+.filter-category .filter-btn.active{
+    background-color:rgb(95, 158, 208);
+    color: #fff;
+    border: none;
+}
 
 
