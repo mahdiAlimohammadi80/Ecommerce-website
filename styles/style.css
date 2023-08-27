@@ -689,5 +689,33 @@ header .cart:hover .cart-icon {
     background-color: rgb(147, 191, 227);
     color: #fff;
 }
+.man-clothes{
+    padding: 0 120px;
+    margin-top: 80px;
+}
+.title-moreBtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title-moreBtn .more-btn{
+    width: 120px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: linear-gradient(45deg,rgb(30, 155, 187),rgb(73, 145, 208));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .2s;
+}
+.title-moreBtn .more-btn:hover{
+    background: linear-gradient(90deg,rgb(30, 155, 187),rgb(11, 107, 192));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 
