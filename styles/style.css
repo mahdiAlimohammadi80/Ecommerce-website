@@ -747,5 +747,69 @@ header .cart:hover .cart-icon {
     padding: 0 120px;
     margin-top: 50px;
 }
+.suggestion{
+    padding: 0 120px;
+    margin: 50px;
+}
+.suggestion .row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(200px , 1fr));
+    grid-gap: 20px 30px;
+    margin-top: 20px;
+}
+.suggestion .suggestion-box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+}
+.suggestion-box .suggestion-title{
+    border-bottom: 3px solid #ddf0f4;
+    padding-bottom: 5px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #484848;
+}
+.suggestion-box .card{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    height: 100px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: .2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.suggestion-box .card:hover{
+    background-color: #fff;
+}
+.suggestion-box .card .image{
+    height: 100%;
+}
+.suggestion-box .card .image img{
+    width: 80px;
+    height: 100%;
+}
+.suggestion-box .card .details{
+    margin-right: 10px;
+}
+.suggestion-box .card .details h4{
+    font-size: 15px;
+    font-weight: 500;
+    color: #484848;
+}
+.suggestion-box .price-box{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+.suggestion-box .price-box .percent{
+    text-decoration: line-through;
+    color: rgb(124, 119, 119);
+    font-size: 14px;
+}
+.suggestion-box .price-box .price{
+    color: #484848;
+    font-size: 15px;
+}
 
 
