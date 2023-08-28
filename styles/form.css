@@ -18,6 +18,9 @@ body{
     justify-content: center;
     align-items: center;
 }
+input::placeholder{
+    font-size: 13px;
+}
 .container{
     position: relative;
     max-width: 800px;
