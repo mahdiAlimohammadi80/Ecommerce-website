@@ -465,9 +465,10 @@ header .cart:hover .cart-icon {
     position: relative;
     margin:20px 5px;
     transition: .2s;
-    border: 1px solid #f4f0ff;
+    /* border: 1px solid #f4f0ff; */
     user-select: none;
     width: 200px;
+    height: 408px;
 }
 .clothes-list.active .cloth-item{
     pointer-events: none;
@@ -540,7 +541,7 @@ header .cart:hover .cart-icon {
 }
 .cloth-item h4{
     padding:5px 10px;
-    font-size: 15px;
+    font-size: 14px;
     font-size: 500;
     color: #484848;
 }
@@ -588,8 +589,10 @@ header .cart:hover .cart-icon {
     font-size: 15px;
 }
 .cloth-item .button{
+    position: absolute;
+    bottom: 5px;
+    left: 2%;
     width:95% ;
-    margin: 10px auto ;
     height: 40px;
 }
 .cloth-item .details-btn{
