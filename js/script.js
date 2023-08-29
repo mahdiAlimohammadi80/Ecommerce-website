@@ -171,3 +171,18 @@ filterBtn.forEach((btn)=>{
     })
 })
 
+//-----------------------------------------------------------------------
+
+// show cart
+
+const cartIconBox = document.querySelector('.cart');
+const cartBox = document.querySelector('.cart-box');
+const closeIcon = document.querySelector('.cart-box .close-icon');
+
+cartIconBox.addEventListener('click',()=>{
+    cartBox.classList.toggle('active');
+})
+
+closeIcon.addEventListener('click',()=>{
+    cartBox.classList.remove('active');
+})
