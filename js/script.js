@@ -224,6 +224,34 @@ const allClothes = [
 
 let basket =[];
 const cartIcon = document.querySelectorAll('.fa-basket-shopping');
+const cartList = document.querySelector('.cart-list');
+
+function showCartProduct(){
+    document.querySelectorAll('.cart-item').forEach((item)=>item.remove());
+    basket.forEach((item)=>{
+        let totalPrice = item.price * item.count ;
+        let newItem = ` <li class="cart-item">
+        <div class="image-title">
+            <img src="${item.image}" alt="تصویر پوشاک">
+            <h4>${item.title}</h4>
+        </div>
+        <div class="details">
+            <div class="count">
+                <span class="count-text">تعداد :&nbsp</span>
+                <div class="number">
+                    <span class="increase" onclick="increaseCount(this)">+</span>
+                    <input type="number" value="${item.count}" disabled>
+                    <span class="decrease" onclick="decreaseCount(this)">-</span>
+                </div>
+            </div>
+            <div class="price">
+                <span class="price-text">قیمت :&nbsp<span class="price-number">${totalPrice}</span></span>
+            </div>
+        </div>
+    </li>`;
+    cartList.innerHTML += newItem ;
+    })
+}
 
 function addToBasket() {
     cartIcon.forEach((icon)=>{
@@ -249,7 +277,7 @@ function addToBasket() {
                     }
                 })
             }
-
+            showCartProduct();
         })
     })
     
