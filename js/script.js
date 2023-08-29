@@ -186,3 +186,73 @@ cartIconBox.addEventListener('click',()=>{
 closeIcon.addEventListener('click',()=>{
     cartBox.classList.remove('active');
 })
+
+// product list && add to cart
+
+const allClothes = [
+    { title: 'تی شرت 1 مردانه جنس ویسکوز', price: 80000, image: 'image/7.jpg', count: 1 },
+    { title: 'تی شرت 2 مردانه جنس ویسکوز', price: 100000, image: 'image/8.jpg', count: 1 },
+    { title: 'تی شرت 3 مردانه جنس ویسکوز', price: 120000, image: 'image/9.jpg', count: 1 },
+    { title: 'تی شرت 4 مردانه جنس ویسکوز', price: 140000, image: 'image/8.jpg', count: 1 },
+    { title: 'تی شرت 5 مردانه جنس ویسکوز', price: 160000, image: 'image/11.jpg', count: 1 },
+    { title: 'تی شرت 6 مردانه جنس ویسکوز', price: 180000, image: 'image/7.jpg', count: 1 },
+    { title: 'تی شرت 7 مردانه جنس ویسکوز', price: 200000, image: 'image/8.jpg', count: 1 },
+    { title: 'تی شرت 8 مردانه جنس ویسکوز', price: 120000, image: 'image/9.jpg', count: 1 },
+    { title: 'تی شرت 9 مردانه جنس ویسکوز', price: 120000, image: 'image/8.jpg', count: 1 },
+    { title: 'تی شرت 10 مردانه جنس ویسکوز', price: 120000, image: 'image/11.jpg', count: 1 },
+    { title:  'تی شرت 1 زنانه جنس ویسکوز', price: 80000, image: 'image/12.jpg',count: 1 },
+    { title:  'تی شرت 2 زنانه جنس ویسکوز', price: 100000, image: 'image/13.jpg',count: 1 },
+    { title:  'تی شرت 3 زنانه جنس ویسکوز', price: 120000, image: 'image/14.jpg',count: 1 },
+    { title:  'تی شرت 4 زنانه جنس ویسکوز', price: 140000, image: 'image/15.jpg',count: 1 },
+    { title:  'تی شرت 5 زنانه جنس ویسکوز', price: 160000, image: 'image/16.jpg',count: 1 },
+    { title:  'تی شرت 6 زنانه جنس ویسکوز', price: 180000, image: 'image/12.jpg',count: 1 },
+    { title:  'تی شرت 7 زنانه جنس ویسکوز', price: 200000, image: 'image/13.jpg',count: 1 },
+    { title:  'تی شرت 8 زنانه جنس ویسکوز', price: 80000, image: 'image/14.jpg',count: 1 },
+    { title:  'تی شرت 9 زنانه جنس ویسکوز', price: 80000, image: 'image/15.jpg',count: 1 },
+    { title:  'تی شرت 10 زنانه جنس ویسکوز', price: 80000, image: 'image/16.jpg',count: 1 },
+    { title:  'تی شرت 1 بچه گانه جنس ویسکوز', price: 80000, image: 'image/17.jpg',count: 1 },
+    { title:  'تی شرت 2 بچه گانه جنس ویسکوز', price: 100000, image: 'image/18.jpg',count: 1 },
+    { title:  'تی شرت 3 بچه گانه جنس ویسکوز', price: 120000, image: 'image/19.jpg',count: 1 },
+    { title:  'تی شرت 4 بچه گانه جنس ویسکوز', price: 140000, image: 'image/7.jpg',count: 1 },
+    { title:  'تی شرت 5 بچه گانه جنس ویسکوز', price: 160000, image: 'image/8.jpg',count: 1 },
+    { title:  'تی شرت 6 بچه گانه جنس ویسکوز', price: 180000, image: 'image/17.jpg',count: 1 },
+    { title:  'تی شرت 7 بچه گانه جنس ویسکوز', price: 200000, image: 'image/18.jpg',count: 1 },
+    { title:  'تی شرت 8 بچه گانه جنس ویسکوز', price: 60000, image: 'image/19.jpg',count: 1 },
+    { title:  'تی شرت 9 بچه گانه جنس ویسکوز', price: 60000, image: 'image/7.jpg',count: 1 },
+    { title:  'تی شرت 10 بچه گانه جنس ویسکوز', price: 60000, image: 'image/8.jpg',count: 1 },
+];
+
+let basket =[];
+const cartIcon = document.querySelectorAll('.fa-basket-shopping');
+
+function addToBasket() {
+    cartIcon.forEach((icon)=>{
+        icon.addEventListener('click',(e)=>{
+            let parentLi = e.target.closest('.cloth-item');
+            let clothTitle = parentLi.querySelector('h4').innerHTML;
+            let findItem = basket.find((item)=>{
+                return item.title == clothTitle;
+            })
+            if(findItem){
+                findItem.count++;
+            }else{
+                allClothes.forEach((cloth)=>{
+                    if(cloth.title == clothTitle){
+                            // let itemTotalPrice = cloth.price * cloth.count;
+                            let newItem = {
+                                title:cloth.title ,
+                                image:cloth.image ,
+                                price:cloth.price ,
+                                count:cloth.count
+                            }
+                            basket.push(newItem);     
+                    }
+                })
+            }
+
+        })
+    })
+    
+}
+
+addToBasket();
