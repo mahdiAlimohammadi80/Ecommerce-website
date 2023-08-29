@@ -263,6 +263,21 @@ function increaseCount(elem){
     showCartProduct();
 }
 
+function decreaseCount(elem){
+    let productTitle = elem.closest('.cart-item').querySelector('h4').innerHTML;
+    basket.forEach((item, index) => {
+        if (item.title === productTitle) {
+            if (item.count > 0) {
+                item.count--;
+                if (item.count == 0) {
+                    basket.splice(index, 1); 
+                }
+            }
+        }
+    });
+    showCartProduct();
+}
+
 function addToBasket() {
     cartIcon.forEach((icon)=>{
         icon.addEventListener('click',(e)=>{
