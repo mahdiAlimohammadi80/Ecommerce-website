@@ -1090,6 +1090,7 @@ header .cart:hover .cart-icon {
     }
 }
 @media screen and (max-width:780px){
+    
     header .navbar{
         position: relative;
         display: flex;
@@ -1188,7 +1189,7 @@ header .cart:hover .cart-icon {
         margin-top: 20px;
     }
     .hero-section .image img {
-        width: 450px;
+        width: 300px;
         height: 300px;
     }
     .main-title{
@@ -1204,11 +1205,18 @@ header .cart:hover .cart-icon {
     .woman-clothes{
         padding: 20px 0;
     }
+    .banner{
+      margin: 0 auto;
+      width: 80%;
+    }
     .banner .row {
         grid-template-columns: repeat(auto-fit , minmax(450px , 1fr));   
     }
+    .banner .banner-card{
+        margin: 0 -25px;
+    }
     .banner .banner-card img {
-        width: 239px;
+        width: 180px;
         height: 80%;
     }
     .filter-category .filter-btn {
@@ -1220,4 +1228,13 @@ header .cart:hover .cart-icon {
         font-size: 24px;
     }
 }
-
+@media screen and (max-width:550px){
+    .banner .banner-card {
+        width: 80%;
+        margin: 0 -25px;
+    }
+    .banner .banner-card img {
+        width: 150px;
+        height: 80%;
+    }
+}
