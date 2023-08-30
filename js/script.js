@@ -309,3 +309,14 @@ function addToBasket() {
 }
 
 addToBasket();
+
+//----------------------------------------------------------------
+
+//hamburger menu show
+
+const hamburgerMenu = document.querySelector('.hamburger-menu i');
+
+hamburgerMenu.addEventListener('click',()=>{
+    navbar.classList.add('active');
+    console.log(document.body.clientWidth);
+});
