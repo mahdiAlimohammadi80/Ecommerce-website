@@ -955,3 +955,269 @@ header .cart:hover .cart-icon {
     background-color: rgba(255, 255, 255, .2);
 }
 
+@media screen and (max-width:1320px){
+    .hero-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+    header .navbar {
+        padding: 0 37px;
+    }
+    header .logo-menu {
+        margin-left: 35px;
+    }
+    .hero-section .details h2 {
+        font-size: 40px;
+    }
+    .hero-section .image {
+        position: relative;
+        background-color: rgb(213, 232, 247);
+        border-radius: 50%;
+        opacity: 0;
+        margin-top: 20px;
+    }
+    .hero-section .image img {
+        width: 492px;
+        height: 354px;
+    }
+    .popular-category,
+    .new-clothes,
+    .banner,
+    .man-clothes,
+    .filter-category,
+    .Bestselling-clothes,
+    .suggestion,
+    .woman-clothes{
+        padding: 20px 30px;
+    }
+    .banner .banner-card img {
+        width: 300px;
+        height: 85%;
+    }
+    .banner-card h4{
+        font-size: 22px;
+        max-width: 150px;
+    }
+    .banner-card p{
+        font-size: 17px;
+        max-width: 150px;
+    }
+    .banner-card .time-box {
+       max-width: 150px;
+    }
+    .banner-card .banner-btn{
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+    }
+    header .sub-menu {
+        position: absolute;
+        top: 100px;
+        right: -100px;
+        width: 800px;
+    }
+    .banner-card .time-box {
+        max-width: 292px;
+    }
+    .arrows{
+        margin-left: 20px;
+    }
+    .cart-box{
+        left: -300px;
+        z-index: 200;
+    }
+}
+@media screen and (max-width:1180px){
+    header .navbar {
+        padding: 0 65px;
+    }
+    header .menu-list {
+        display: none;
+    }
+    header .like, header .cart {
+        margin-left: 10px;
+    }
+    .hamburger-menu{
+        z-index: 150;
+        opacity: 1;
+    }
+    .hero-section .details h2 {
+        font-size: 28px;
+    }
+    .hero-section .details p {
+        font-size: 18px;
+    }
+    .hero-section .details .shop-btn {
+        width: 150px;
+        height: 40px;
+        font-size: 16px;
+    }
+    .main-title{
+        font-size: 22px;
+    }
+    .popular-category,
+    .new-clothes,
+    .banner,
+    .man-clothes,
+    .filter-category,
+    .Bestselling-clothes,
+    .suggestion,
+    .woman-clothes{
+        padding: 20px 20px;
+    }
+    .banner .row {
+        grid-template-columns: repeat(auto-fit , minmax(450px , 1fr));   
+    }
+    .banner .banner-card img {
+        width: 300px;
+        height: 85%;
+    }
+    .banner-card h4{
+        font-size: 22px;
+        max-width: 200px;
+    }
+    .banner-card p{
+        font-size: 17px;
+        max-width: 200px;
+    }
+    .banner .banner-card .time-box{
+        max-width: 170px;
+    }
+    .banner-card .time .time-text {
+        margin: 10px 8px;
+    }
+}
+@media screen and (max-width:780px){
+    header .navbar{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+    header .navbar.active{
+        opacity: 1;
+        z-index: 160;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 120;
+        transition: .2s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+    header .navbar.active .hamburger-menu{
+        display: none;
+    }
+    header .navbar.active .logo{
+        display: none;
+    }
+    header .menu-list{
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        z-index: 120;
+    }
+    header .navbar.active .menu-list{
+        display: flex;
+    }
+    header .menu-item{
+        margin-top: 30px;
+    }
+    header .menu-link{
+        margin-top: 20px;
+    }
+    header .sub-menu{
+        position: absolute;
+        top: 80px;
+        right: -165px;
+        width: 400px;
+        z-index: -100;
+        opacity: 0;
+    }
+    header .sub-menu.active{
+        z-index: 140;
+        opacity: 1;
+    }
+    header .second-list {
+        min-width: 116px;
+    }
+    header .sub-menu-item{
+        margin-top: 20px;
+    }
+    .sub-menu-item img{
+        display: none;
+    }
+    header .search-cart-like .search{
+        display: none;
+    }
+    header .menu-list.active .search-cart-like{
+        display: flex;
+    }
+    header .phone-location {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    header .phone-location .location span {
+        font-size: 14px;
+        font-weight: 500;
+        max-width: 200px;
+        margin-top: 5px;
+    }
+    .hero-section .details p {
+        font-size: 16px;
+    }
+    .hero-section .details .shop-btn {
+        width: 150px;
+        height: 40px;
+        font-size: 15px;
+    }
+    .hero-section .image {
+        position: relative;
+        background-color: rgb(213, 232, 247);
+        border-radius: 50%;
+        opacity: 0;
+        margin-top: 20px;
+    }
+    .hero-section .image img {
+        width: 450px;
+        height: 300px;
+    }
+    .main-title{
+        font-size: 18px;
+    }
+    .popular-category,
+    .new-clothes,
+    .banner,
+    .man-clothes,
+    .filter-category,
+    .Bestselling-clothes,
+    .suggestion,
+    .woman-clothes{
+        padding: 20px 0;
+    }
+    .banner .row {
+        grid-template-columns: repeat(auto-fit , minmax(450px , 1fr));   
+    }
+    .banner .banner-card img {
+        width: 239px;
+        height: 80%;
+    }
+    .filter-category .filter-btn {
+        width: 100px;
+        height: 40px;
+        font-size: 13px;
+    }
+    .title-arrow .arrows .arrow {
+        font-size: 24px;
+    }
+}
+
