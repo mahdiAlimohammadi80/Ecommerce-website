@@ -125,24 +125,22 @@ form label{
     flex-direction: column;
     align-items: center;
     width: 30%;
-    min-width: 240px;
     padding: 0 10px;
     text-align: center;
-
 }
 .content{
     color: #fff;
     transition: 1.2s;
 }
 .content h4{
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 500;
 }
 .content p{
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 500;
     opacity: .8;
-    margin: 10px 0;
+    max-width: 100px;
 }
 .content .button-text{
     margin-top: 40px;
@@ -205,4 +203,50 @@ form label{
 .container.register .left-panel img ,
 .container.register .left-panel .content{
     transform: translateX(0);
+}
+
+@media screen and (max-width:1030px){
+    .container {
+        height: 80vh;
+        min-width: 389px;
+    }
+    .input-field {
+        grid-template-columns: repeat(auto-fit , minmax(173px ,1fr));
+    }
+    .content h4 {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .content p {
+        font-size: 15px;
+        font-weight: 500;
+        opacity: .8;
+        margin: 10px 0;
+        max-width: 200px;
+    }
+}
+@media screen and (max-width:770px){
+    form h2 {
+        font-size: 20px;
+        color: #484848;
+        font-weight: 500;
+    }
+    form label {
+        font-size: 15px;
+    }
+    .content .button-text span {
+        opacity: .8;
+        font-size: 15px;
+    }
+    
+    .content .panel-btn {
+        width: 100px;
+        height: 40px;
+    }
+    .panel img {
+        width: 280px;
+        height: 240px;
+        object-fit: cover;
+        transition: 1.2s;
+    }
 }
